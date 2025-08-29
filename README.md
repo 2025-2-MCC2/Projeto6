@@ -10,9 +10,9 @@ Vide tutoriais do PI.
 <a href= "https://www.fecap.br/"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhZPrRa89Kma0ZZogxm0pi-tCn_TLKeHGVxywp-LXAFGR3B1DPouAJYHgKZGV0XTEf4AE&usqp=CAU" alt="FECAP - Fundação de Comércio Álvares Penteado" border="0"></a>
 </p>
 
-# Nome do Projeto
+# Liderança Empáticcas 
 
-## Nome do Grupo
+## DevLiderança 
 
 ## Integrantes: <a href="https://www.linkedin.com/in/eduardapadilla/">Eduarda Padilla</a>, <a href="https://www.linkedin.com/in/laisnavarro3110/">Lais Navarro</a>, <a href="https://www.linkedin.com/in/ricardoojunior/">Ricardo Oliveira </a>, <a href="https://www.linkedin.com/in/enzo-sakita-117801364/">Enzo Sakita, <a href="https://github.com/EricAloise">Eric Aloise</a>
 
