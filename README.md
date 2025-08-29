@@ -16,7 +16,7 @@ Vide tutoriais do PI.
 
 ## Integrantes: <a href="https://www.linkedin.com/in/eduardapadilla/">Eduarda Padilla</a>, <a href="https://www.linkedin.com/in/laisnavarro3110/">Lais Navarro</a>, <a href="https://www.linkedin.com/in/ricardoojunior/">Ricardo Oliveira </a>, <a href="https://www.linkedin.com/in/enzo-sakita-117801364/">Enzo Sakita, <a href="https://github.com/EricAloise">Eric Aloise</a>
 
-## Professores Orientadores: <a href="https://www.linkedin.com/in/victorbarq/">Dr. Victor Von Doom</a>, <a href="https://www.linkedin.com/in/victorbarq/">Me. Saitama</a>, <a href="https://www.linkedin.com/in/victorbarq/">Dr. Strange</a>, <a href="https://www.linkedin.com/in/victorbarq/">Me. Yoda</a>, <a href="https://www.linkedin.com/in/victorbarq/">Dr. Gero</a>
+## Professores Orientadores: <a href="https://www.linkedin.com/in/dolemes/">David Lemes</a>, <a href="https://www.linkedin.com/in/katia-bossi/">Katia Milani</a>, <a href="https://www.linkedin.com/in/cristina-machado-corr%C3%AAa-leite-630309160/">Cristina Machado</a>, <a href="https://www.linkedin.com/in/leonardo-fabris-lugoboni-a3369416/">Leonardo Lugoboni</a>, <a href="https://www.linkedin.com/in/francisco-escobar/">Francisco Escobar</a>
 
 ## Descrição
 
