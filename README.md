@@ -14,8 +14,7 @@ Vide tutoriais do PI.
 
 ## Nome do Grupo
 
-## Integrantes: <a href="https://www.linkedin.com/in/eduardapadilla/">Eduarda Padilla</a>, <a href="https://www.linkedin.com/in/laisnavarro3110/">Lais Navarro</a>, <a href="
-https://www.linkedin.com/in/ricardoojunior/">Ricardo Oliveira </a>, <a href="https://www.linkedin.com/in/enzo-sakita-117801364/">Enzo Sakita/a>, <a href="https://github.com/EricAloise">Eric Aloise</a>
+## Integrantes: <a href="https://www.linkedin.com/in/eduardapadilla/">Eduarda Padilla</a>, <a href="https://www.linkedin.com/in/laisnavarro3110/">Lais Navarro</a>, <a href="https://www.linkedin.com/in/ricardoojunior/">Ricardo Oliveira </a>, <a href="https://www.linkedin.com/in/enzo-sakita-117801364/">Enzo Sakita/a>, <a href="https://github.com/EricAloise">Eric Aloise</a>
 
 ## Professores Orientadores: <a href="https://www.linkedin.com/in/victorbarq/">Dr. Victor Von Doom</a>, <a href="https://www.linkedin.com/in/victorbarq/">Me. Saitama</a>, <a href="https://www.linkedin.com/in/victorbarq/">Dr. Strange</a>, <a href="https://www.linkedin.com/in/victorbarq/">Me. Yoda</a>, <a href="https://www.linkedin.com/in/victorbarq/">Dr. Gero</a>
 
