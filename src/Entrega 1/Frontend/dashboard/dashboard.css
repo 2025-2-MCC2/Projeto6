@@ -1,0 +1,58 @@
+     @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;1,300&display=swap');
+
+     body {
+            font-family: Poppins, sans-serif;
+            background-color: #f3f3f3;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            background-color: #6de495;
+            padding: 20px;
+            text-align: center;
+            color: rgb(0, 0, 0);
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+        .dashboard-stats {
+            display: flex;
+            justify-content: space-around;
+            width: 80%;
+            margin: 20px 0;
+        }
+        .stat-card {
+            background-color: #6de495;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            color: rgb(0, 0, 0);
+            width: 150px;
+            font-size: 16px;
+        }
+        .ranking-section {
+            width: 80%;
+            margin: 20px 0;
+        }
+        .ranking-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        .ranking-table th, .ranking-table td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: center;
+        }
+        .ranking-table th {
+            background-color: #6de495;
+            color: rgb(0, 0, 0);
+        }
+        .ranking-table td {
+            background-color: #f9f9f9;
+        }
