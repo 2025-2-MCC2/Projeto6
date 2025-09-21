@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="cadastro.css" />
+  <title>Cadastro</title>
+</head>
+<body>
+  <img src="lideranças-empaticas.png" alt="Logo Lideranças Empáticas" class="logo" />
+
+  <div>
+    <form id="form">
+      <h2 class="titulo">Cadastre-se</h2>
+
+      <label for="Nome">Nome Completo</label>
+      <div class="input">
+        <input id="Nome" name="Nome" type="text" placeholder="Digite seu nome" required />
+      </div>
+
+      <label for="RA">RA</label>
+      <div class="input">
+        <input id="RA" name="RA" type="number" placeholder="Digite seu RA" required />
+      </div>
+
+      <label for="Celular">Celular</label>
+      <div class="input">
+        <input id="Celular" name="Celular" type="tel" placeholder="+55" pattern="\d+" title="Digite apenas números" required/>
+      </div>
+
+      <label for="Email">E-mail</label>
+      <div class="input">
+        <input type="email" name="Email" id="Email" placeholder="Digite seu email" required />
+      </div>
+
+      <label for="Senha">Senha</label>
+      <div class="input">
+        <input id="Senha" name="Senha" type="password" placeholder="Digite sua senha" required />
+      </div>
+
+      <div id="botao">
+        <button type="submit">Cadastrar</button>
+        <p class="toggle">Já tem conta? <a href="login.html">Entrar</a></p>
+      </div>
+    </form>
+  </div>
+
+  <script>
+    // Função para permitir somente números nos campos RA e Celular
+    function somenteNumeros(event) {
+      const charCode = event.which ? event.which : event.keyCode;
+      // Permite números (48-57), backspace (8), delete (46), setas (37-40)
+      if (
+        (charCode >= 48 && charCode <= 57) ||
+        charCode === 8 ||
+        charCode === 46 ||
+        (charCode >= 37 && charCode <= 40)
+      ) {
+        return true;
+      } else {
+        event.preventDefault();
+        return false;
+      }
+    }
+
+    document.getElementById("RA").addEventListener("keypress", somenteNumeros);
+    document.getElementById("Celular").addEventListener("keypress", somenteNumeros);
+
+    document.getElementById("form").addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      const nome = document.getElementById("Nome").value.trim();
+      const ra = document.getElementById("RA").value.trim();
+      const celular = document.getElementById("Celular").value.trim();
+      const email = document.getElementById("Email").value.trim();
+      const senha = document.getElementById("Senha").value;
+
+      // Valida se RA contém apenas números
+      if (!/^\d+$/.test(ra)) {
+        alert("RA deve conter apenas números.");
+        return;
+      }
+
+      // Valida se Celular contém apenas números
+      if (!/^\d+$/.test(celular)) {
+        alert("Celular deve conter apenas números.");
+        return;
+      }
+
+      const usuario = {
+        nome: nome,
+        ra: ra,
+        celular: celular,
+        email: email,
+        senha: senha,
+      };
+
+      localStorage.setItem("usuario", JSON.stringify(usuario));
+
+      alert("Cadastro realizado com sucesso!");
+      window.location.href = "login.html";
+    });
+  </script>
+</body>
+</html>

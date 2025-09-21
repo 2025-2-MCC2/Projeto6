@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Perfil do Usuário</title>
+  <link rel="stylesheet" href="profile.css" />
+</head>
+<body>
+  <img src="lideranças-empaticas.png" alt="Logo Lideranças Empáticas" class="logo" />
+  <div class="container">
+    <div class="card">
+      <div class="foto">
+        <img src="https://via.placeholder.com/150" alt="Foto do Usuário" />
+      </div>
+      <h2 id="nomeUsuario">Nome do Usuário</h2>
+      <p id="raUsuario">RA: 000000</p> <!-- Adicionado campo RA -->
+      <p id="emailUsuario">usuario@email.com</p>
+      <p id="celularUsuario">(11) 99999-9999</p>
+
+      <button class="btn" type="button" id="editarBtn">Editar Perfil</button>
+      <button class="btn" type="button" id="voltarBtn">Voltar à página principal</button>
+      <button class="btn logout" type="button" id="sairBtn">Sair</button>
+    </div>
+  </div>
+
+  <script>
+    const usuario = JSON.parse(localStorage.getItem("usuario"));
+    if (usuario) {
+      document.getElementById("nomeUsuario").innerText = usuario.nome;
+      document.getElementById("raUsuario").innerText = "RA: " + usuario.ra; // Preenche RA
+      document.getElementById("emailUsuario").innerText = usuario.email;
+      document.getElementById("celularUsuario").innerText = usuario.celular;
+    }
+
+    document.getElementById("editarBtn").addEventListener("click", () => {
+      alert("Aqui você pode editar seus dados.");
+      window.location.href = "edit-profile.html";
+    });
+
+    document.getElementById("sairBtn").addEventListener("click", () => {
+      localStorage.removeItem("usuario");
+      alert("Você saiu da conta!");
+      window.location.href = "login.html";
+    });
+
+    document.getElementById("voltarBtn").addEventListener("click", () => {
+      window.location.href = "https://liderancasempaticas.com/";
+    });
+  </script>
+</body>
+</html>

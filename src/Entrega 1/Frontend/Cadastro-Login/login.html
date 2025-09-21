@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="cadastro.css" />
+  <title>Login</title>
+</head>
+<body>
+  <img src="lideranças-empaticas.png" alt="Logo Lideranças Empáticas" class="logo" />
+
+  <div>
+    <form id="loginForm">
+      <h2 class="titulo">Login</h2>
+
+      <label for="RA">RA</label>
+      <div class="input">
+        <input id="RA" name="RA" type="number" placeholder="Digite seu RA" required />
+      </div>
+
+      <label for="Email">E-mail</label>
+      <div class="input">
+        <input type="email" id="Email" placeholder="Digite seu email" required />
+      </div>
+
+      <label for="Senha">Senha</label>
+      <div class="input">
+        <input type="password" id="Senha" placeholder="Digite sua senha" required />
+      </div>
+
+      <div id="botao">
+        <button type="submit">Entrar</button>
+        <p class="toggle">Não tem conta? <a href="cadastro.html">Cadastre-se</a></p>
+      </div>
+    </form>
+  </div>
+
+  <script>
+    // Função para permitir somente números no campo RA
+    function somenteNumeros(event) {
+      const charCode = event.which ? event.which : event.keyCode;
+      if (
+        (charCode >= 48 && charCode <= 57) || // números 0-9
+        charCode === 8 || // backspace
+        charCode === 46 || // delete
+        (charCode >= 37 && charCode <= 40) // setas
+      ) {
+        return true;
+      } else {
+        event.preventDefault();
+        return false;
+      }
+    }
+
+    document.getElementById("RA").addEventListener("keypress", somenteNumeros);
+
+    document.getElementById("loginForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      const usuario = JSON.parse(localStorage.getItem("usuario"));
+
+      const ra = document.getElementById("RA").value.trim();
+      const email = document.getElementById("Email").value.trim();
+      const senha = document.getElementById("Senha").value.trim();
+
+      if (!usuario) {
+        alert("Nenhum usuário cadastrado. Por favor, cadastre-se primeiro.");
+        return;
+      }
+
+      if (usuario.ra === ra && usuario.email === email && usuario.senha === senha) {
+        alert("Login realizado com sucesso!");
+        localStorage.setItem("usuarioLogado", JSON.stringify(usuario));
+        window.location.href = "profile.html";
+      } else {
+        alert("RA, e-mail ou senha incorretos!");
+      }
+    });
+  </script>
+</body>
+</html>

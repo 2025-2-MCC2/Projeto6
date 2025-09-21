@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;1,300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    font-family: Montserrat, sans-serif;
+    background: linear-gradient(to right, #207C64, #2B2D2F);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#form, #loginForm {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 80px;
+    width: 150%;
+    max-width: 500px;
+    color: black;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+.titulo {
+    font-size: 1.8em;
+    color: black;
+    margin-bottom: 20px;
+    text-align: center;
+    font-family: Poppins, sans-serif;
+}
+.input {
+    width: 100%;
+    border-radius: 20px;
+    border: 1px solid black;
+    padding: 8px 12px;
+    margin-bottom: 15px;
+}
+.input input {
+    width: 100%;
+    border: none;
+    outline: none;
+    font-family: Montserrat, sans-serif;
+    font-size: 11pt;
+    background: transparent;
+    color: black;
+}
+#botao {
+    margin-top: 10px;
+    width: 100%;
+    text-align: center;
+}
+#botao button {
+    font-family: Poppins, sans-serif;
+    background-color: #6de495;
+    width: 100%;
+    height: 40px;
+    border: none;
+    border-radius: 20px;
+    font-size: 1.1em;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    transition: 0.3s;
+}
+#botao button:hover {
+    background: #459c71;
+}
+.toggle {
+    margin-top: 15px;
+    font-size: 0.9em;
+}
+.toggle a {
+    color: #207C64;
+    text-decoration: none;
+    font-weight: bold;
+}
+.toggle a:hover {
+    text-decoration: underline;
+}
+.logo {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 200px;
+}
