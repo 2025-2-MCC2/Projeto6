@@ -1,5 +1,9 @@
+<<<<<<< HEAD
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+=======
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+>>>>>>> 1be6aca3344aa7e93b3a85cd8537a9eaf872dd32
 
 * {
   margin: 0;
@@ -8,17 +12,40 @@
 }
 
 body {
+<<<<<<< HEAD
+  font-family: "Inter", sans-serif;
+=======
   font-family: 'Inter', sans-serif;
+>>>>>>> 1be6aca3344aa7e93b3a85cd8537a9eaf872dd32
   background: linear-gradient(135deg, #f5f7fa 0%, #e8f5e9 100%);
   color: #2c3e50;
   min-height: 100vh;
 }
 
+<<<<<<< HEAD
+/* Menu Hambúrguer - MAIOR */
+=======
 /* Menu Hambúrguer */
+>>>>>>> 1be6aca3344aa7e93b3a85cd8537a9eaf872dd32
 .hamburger {
   position: fixed;
   top: 24px;
   left: 24px;
+<<<<<<< HEAD
+  width: 50px;
+  height: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  z-index: 1100;
+  transition: all 0.3s ease;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+=======
   width: 28px;
   height: 20px;
   display: flex;
@@ -31,24 +58,38 @@ body {
   background: white;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+>>>>>>> 1be6aca3344aa7e93b3a85cd8537a9eaf872dd32
 }
 
 .hamburger:hover {
   transform: scale(1.05);
+<<<<<<< HEAD
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+=======
   box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+>>>>>>> 1be6aca3344aa7e93b3a85cd8537a9eaf872dd32
 }
 
 .hamburger span {
   display: block;
+<<<<<<< HEAD
+  height: 4px;
+  width: 32px;
+=======
   height: 3px;
   width: 100%;
+>>>>>>> 1be6aca3344aa7e93b3a85cd8537a9eaf872dd32
   background: linear-gradient(135deg, #6de495 0%, #5dd485 100%);
   border-radius: 3px;
   transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
 .hamburger.active span:nth-child(1) {
+<<<<<<< HEAD
+  transform: rotate(45deg) translate(8px, 8px);
+=======
   transform: rotate(45deg) translate(6px, 6px);
+>>>>>>> 1be6aca3344aa7e93b3a85cd8537a9eaf872dd32
 }
 
 .hamburger.active span:nth-child(2) {
@@ -57,17 +98,29 @@ body {
 }
 
 .hamburger.active span:nth-child(3) {
+<<<<<<< HEAD
+  transform: rotate(-45deg) translate(8px, -8px);
+=======
   transform: rotate(-45deg) translate(6px, -6px);
+>>>>>>> 1be6aca3344aa7e93b3a85cd8537a9eaf872dd32
 }
 
 /* Menu Dropdown */
 .dropdown-menu {
   position: fixed;
+<<<<<<< HEAD
+  top: 85px;
+  left: 24px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.12);
+=======
   top: 70px;
   left: 24px;
   background: white;
   border-radius: 16px;
   box-shadow: 0 10px 40px rgba(0,0,0,0.12);
+>>>>>>> 1be6aca3344aa7e93b3a85cd8537a9eaf872dd32
   padding: 8px;
   min-width: 220px;
   opacity: 0;
@@ -112,7 +165,11 @@ body {
 .overlay {
   position: fixed;
   inset: 0;
+<<<<<<< HEAD
+  background: rgba(0, 0, 0, 0.4);
+=======
   background: rgba(0,0,0,0.4);
+>>>>>>> 1be6aca3344aa7e93b3a85cd8537a9eaf872dd32
   backdrop-filter: blur(2px);
   opacity: 0;
   visibility: hidden;
@@ -136,7 +193,11 @@ body {
 }
 
 .header::before {
+<<<<<<< HEAD
+  content: "";
+=======
   content: '';
+>>>>>>> 1be6aca3344aa7e93b3a85cd8537a9eaf872dd32
   position: absolute;
   top: 0;
   left: 0;
@@ -155,7 +216,11 @@ body {
   font-size: 36px;
   margin-bottom: 8px;
   font-weight: 700;
+<<<<<<< HEAD
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+=======
   text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+>>>>>>> 1be6aca3344aa7e93b3a85cd8537a9eaf872dd32
 }
 
 .header p {
@@ -186,14 +251,22 @@ body {
   padding: 28px 24px;
   border-radius: 16px;
   text-align: center;
+<<<<<<< HEAD
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+=======
   box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+>>>>>>> 1be6aca3344aa7e93b3a85cd8537a9eaf872dd32
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
 }
 
 .stat-card::before {
+<<<<<<< HEAD
+  content: "";
+=======
   content: '';
+>>>>>>> 1be6aca3344aa7e93b3a85cd8537a9eaf872dd32
   position: absolute;
   top: 0;
   left: 0;
@@ -233,12 +306,20 @@ body {
   background: white;
   padding: 32px;
   border-radius: 20px;
+<<<<<<< HEAD
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+=======
   box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+>>>>>>> 1be6aca3344aa7e93b3a85cd8537a9eaf872dd32
   transition: all 0.3s ease;
 }
 
 .ranking-section:hover {
+<<<<<<< HEAD
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.12);
+=======
   box-shadow: 0 6px 30px rgba(0,0,0,0.12);
+>>>>>>> 1be6aca3344aa7e93b3a85cd8537a9eaf872dd32
 }
 
 .ranking-section h2 {
@@ -325,15 +406,34 @@ body {
   .header h1 {
     font-size: 28px;
   }
+<<<<<<< HEAD
+
+  .header p {
+    font-size: 16px;
+  }
+
+=======
   
   .header p {
     font-size: 16px;
   }
   
+>>>>>>> 1be6aca3344aa7e93b3a85cd8537a9eaf872dd32
   .dashboard-stats {
     grid-template-columns: repeat(2, 1fr);
     gap: 16px;
   }
+<<<<<<< HEAD
+
+  .stat-card {
+    padding: 20px 16px;
+  }
+
+  .stat-card p {
+    font-size: 28px;
+  }
+
+=======
   
   .stat-card {
     padding: 20px 16px;
@@ -343,10 +443,22 @@ body {
     font-size: 28px;
   }
   
+>>>>>>> 1be6aca3344aa7e93b3a85cd8537a9eaf872dd32
   .ranking-section {
     padding: 20px;
     overflow-x: auto;
   }
+<<<<<<< HEAD
+
+  .ranking-section h2 {
+    font-size: 20px;
+  }
+
+  .ranking-table {
+    font-size: 13px;
+  }
+
+=======
   
   .ranking-section h2 {
     font-size: 20px;
@@ -356,6 +468,7 @@ body {
     font-size: 13px;
   }
   
+>>>>>>> 1be6aca3344aa7e93b3a85cd8537a9eaf872dd32
   .ranking-table th,
   .ranking-table td {
     padding: 12px 8px;
@@ -366,14 +479,25 @@ body {
   .dashboard-stats {
     grid-template-columns: 1fr;
   }
+<<<<<<< HEAD
+
+=======
   
+>>>>>>> 1be6aca3344aa7e93b3a85cd8537a9eaf872dd32
   .hamburger {
     top: 16px;
     left: 16px;
   }
+<<<<<<< HEAD
+
+  .dropdown-menu {
+    left: 16px;
+    top: 75px;
+=======
   
   .dropdown-menu {
     left: 16px;
     top: 60px;
+>>>>>>> 1be6aca3344aa7e93b3a85cd8537a9eaf872dd32
   }
 }
