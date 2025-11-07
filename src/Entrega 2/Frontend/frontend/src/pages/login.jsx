@@ -1,21 +1,20 @@
 import { Link } from "react-router-dom";
 import "../styles/auth-style.css";
 
-function Cadastro() {
+function login() {
   return (
     <div className="auth-wrapper">
       <div className="auth-card">
-        <h2>Cadastro</h2>
-        <input placeholder="Nome" />
+        <h2>Login</h2>
         <input placeholder="Email" />
         <input placeholder="Senha" type="password" />
-        <button>Cadastre-se</button>
+        <button>Entrar</button>
         <p>
-          Já tem conta? <Link to="/">Fazer login</Link>
+          Ainda não tem conta? <Link to="/cadastro">Cadastre-se</Link>
         </p>
       </div>
     </div>
   );
 }
 
-export default Cadastro;
+export default login;

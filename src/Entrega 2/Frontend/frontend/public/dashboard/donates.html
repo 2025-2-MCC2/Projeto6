@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doação</title>
+    <link rel="stylesheet" href="donates.css">
+</head>
+<body>
+      <!-- Botão Hambúrguer -->
+  <div class="hamburger" id="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <!-- Menu Dropdown -->
+  <div class="dropdown-menu" id="dropdown">
+    <a href="/" onclick="window.parent.location.href='/'; return false;">🏠 Início</a>
+    <a href="dashboard.html">📊 Dashboard</a>
+    <a href="#" class="active">💰 Doações</a>
+    <a href="team.html">👥 Times</a>
+    <a href="configurações.html">⚙️ Configurações</a>
+  </div>
+
+  <!-- Overlay -->
+  <div class="overlay" id="overlay"></div>
+    <div class="container">
+        <!-- Tela de Seleção de Valor -->
+        <div id="selection-screen" class="card">
+            <div class="header">
+                <div class="icon-heart">❤️</div>
+                <h1>Faça sua Doação</h1>
+                <p>Sua contribuição faz a diferença! Escolha um valor ou digite o quanto deseja doar.</p>
+            </div>
+
+            <div class="content">
+                <div class="section">
+                    <label class="label">Valores Sugeridos</label>
+                    <div class="amount-grid">
+                        <button class="amount-btn" onclick="selectAmount(5)">R$ 5</button>
+                        <button class="amount-btn" onclick="selectAmount(10)">R$ 10</button>
+                        <button class="amount-btn" onclick="selectAmount(25)">R$ 25</button>
+                        <button class="amount-btn" onclick="selectAmount(50)">R$ 50</button>
+                        <button class="amount-btn" onclick="selectAmount(100)">R$ 100</button>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <label class="label">Ou digite outro valor</label>
+                    <div class="input-wrapper">
+                        <span class="currency">R$</span>
+                        <input type="text" id="custom-amount" placeholder="0,00" oninput="handleCustomAmount(this)">
+                    </div>
+                </div>
+
+                <button id="generate-btn" class="btn-primary" onclick="generatePix()" disabled>
+                    Gerar PIX de R$ 0,00
+                </button>
+            </div>
+        </div>
+
+        <!-- Tela de PIX Gerado -->
+        <div id="pix-screen" class="card" style="display: none;">
+            <div class="header">
+                <div class="icon-check">✅</div>
+                <h2>PIX Gerado!</h2>
+                <p>Escaneie o QR Code ou copie o código PIX abaixo</p>
+            </div>
+
+            <div class="content">
+                <div class="amount-display">
+                    <p class="amount-label">Valor da doação</p>
+                    <p class="amount-value" id="final-amount">R$ 0,00</p>
+                </div>
+
+                <div class="qr-code-box">
+                    <div class="qr-code-placeholder">
+                        <div class="qr-icon">📱</div>
+                        <p>QR Code seria gerado aqui com uma API de pagamento real</p>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <label class="label">Chave PIX</label>
+                    <div class="pix-key-wrapper">
+                        <input type="text" id="pix-key" value="doação@email.com.br" readonly>
+                        <button class="btn-copy" onclick="copyPixKey()">
+                            <span id="copy-text">📋 Copiar</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="info-box">
+                    <p><strong>Instruções:</strong> Abra o app do seu banco, escolha a opção PIX, 
+                    escaneie o QR Code acima ou cole o código copiado. Confirme o valor e finalize o pagamento.</p>
+                </div>
+
+                <button class="btn-secondary" onclick="resetDonation()">
+                    Fazer outra doação
+                </button>
+            </div>
+        </div>
+
+        <script>
+    // Menu hambúrguer
+    const hamburger = document.getElementById('hamburger');
+    const dropdown = document.getElementById('dropdown');
+    const overlay = document.getElementById('overlay');
+
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      dropdown.classList.toggle('show');
+      overlay.classList.toggle('show');
+    });
+
+    overlay.addEventListener('click', () => {
+      hamburger.classList.remove('active');
+      dropdown.classList.remove('show');
+      overlay.classList.remove('show');
+    });
+
+    // Salvar configurações
+    function saveSettings() {
+      alert('✅ Configurações salvas com sucesso!');
+    }
+  </script>
+
+    <script src="donates.js"></script>
+</body>
+</html>
