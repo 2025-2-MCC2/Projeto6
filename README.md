@@ -7,7 +7,9 @@ Vide tutoriais do PI.
 # <p align="center"> FECAP - Fundação de Comércio Álvares Penteado 
 
 <p align="center">
-</p>![unnamed](https://github.com/user-attachments/assets/c1eed395-d120-43fa-b7b4-5d895bc56437)
+<a href= "https://www.fecap.br/"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhZPrRa89Kma0ZZogxm0pi-tCn_TLKeHGVxywp-LXAFGR3B1DPouAJYHgKZGV0XTEf4AE&usqp=CAU" alt="FECAP - Fundação de Comércio Álvares Penteado" border="0"></a>
+</p>
+
 
 
 # <p align="center"> DevLiderança 
