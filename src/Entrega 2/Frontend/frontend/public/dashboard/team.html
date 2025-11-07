@@ -4,9 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gerenciador de Equipes</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="team.css">
 </head>
 <body>
+    <!-- Botão Hambúrguer -->
+  <div class="hamburger" id="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <!-- Menu Dropdown -->
+  <div class="dropdown-menu" id="dropdown">
+    <a href="/" onclick="window.parent.location.href='/'; return false;">🏠 Início</a>
+    <a href="dashboard.html">📊 Dashboard</a>
+    <a href="donates.html">💰 Doações</a>
+    <a href="#" class="active">👥 Times</a>
+    <a href="configurações.html">⚙️ Configurações</a>
+  </div>
+
+  <!-- Overlay -->
+  <div class="overlay" id="overlay"></div>
     <div class="container">
         <header>
             <h1>Gerenciador de Equipes</h1>
@@ -151,5 +169,28 @@
             `).join('');
         }
     </script>
+    <script>
+        // Menu hambúrguer
+        const hamburger = document.getElementById('hamburger');
+        const dropdown = document.getElementById('dropdown');
+        const overlay = document.getElementById('overlay');
+    
+        hamburger.addEventListener('click', () => {
+          hamburger.classList.toggle('active');
+          dropdown.classList.toggle('show');
+          overlay.classList.toggle('show');
+        });
+    
+        overlay.addEventListener('click', () => {
+          hamburger.classList.remove('active');
+          dropdown.classList.remove('show');
+          overlay.classList.remove('show');
+        });
+    
+        // Salvar configurações
+        function saveSettings() {
+          alert('✅ Configurações salvas com sucesso!');
+        }
+      </script>
 </body>
 </html>
