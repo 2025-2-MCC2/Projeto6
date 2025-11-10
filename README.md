@@ -60,14 +60,8 @@ May the force be with you!
 |       |-->Gestão Empresarial
 |       |-->Projeto Interdisciplinar
 |
-|-->src
-|   |-->Entrega 1
-|   |   |-->Frontend
-|   |   |-->Backend
-|   |
-|   |-->Entrega 2
-|       |-->Frontend
-|       |-->Backend
+|-->Backend
+|--> Frontend
 |
 |README.md
 |LICENSE
@@ -90,17 +84,17 @@ Execute os comandos abaixo para clonar o projeto e acessar a pasta:<br>
 git clone https://github.com/2025-2-MCC2/Projeto2<br>
 cd Projeto6<br>
 ```
-⚙️ Configuração do Backend<br>
+⚙️ Configuração do Backend e Frontend<br>
 
 Acesse a pasta do servidor e instale as dependências:<br>
 ```
-cd frontend/src<br>
-Mostrar mais linhas<br>
+cd backend/src<br>
+npm install<br>
 ```
 
 Inicie o servidor:<br>
 ```
-npm run devMostrar mais linhas<br>
+node server.js<br>
 ```
 
 
@@ -109,7 +103,7 @@ npm run devMostrar mais linhas<br>
 
 Vá para a pasta do cliente e instale as dependências:<br>
 ```
-cd ../Client<br>
+cd frontend<br>
 npm install<br>
 ```
 Execute o projeto:<br>
@@ -119,12 +113,12 @@ npm start<br>
 
 🌐 Endereços Locais<br>
 ```
-Frontend: http://localhost:5173<br>
-Backend: http://localhost:5000<br>
+Frontend: http://localhost:3000<br>
+Backend: http://localhost:8081<br>
 ```
 
 ## 📋 Licença/License
-DevLiderança© 2025 by <a href="https://github.com/2025-2-MCC2/Projeto6">Eduarda Padilla, Lais Navarro, Ricardo Oliveira, Enzo Sakita, Enzo Sakita</a> is licensed under CC BY-SA 4.0 
+DevLiderança© 2025 by <a href="https://github.com/2025-2-MCC2/Projeto6">Eduarda Padilla, Lais Navarro, Ricardo Oliveira, Enzo Sakita, Eric Aloise</a> is licensed under CC BY-SA 4.0 
 
 ## 🎓 Referências
 
