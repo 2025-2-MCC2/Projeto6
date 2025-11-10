@@ -78,42 +78,50 @@ May the force be with you!
 📖 Guia de Instalação e Execução<br>
 ✅ Pré-requisitos<br>
 Antes de começar, certifique-se de ter instalado:<br>
-
+```
 Node.js<br>
 npm<br>
 Git<br>
-
+```
 
 🔽 Clonando o repositório<br>
 Execute os comandos abaixo para clonar o projeto e acessar a pasta:<br>
+```
 git clone https://github.com/2025-2-MCC2/Projeto2<br>
 cd Projeto6<br>
-
+```
 ⚙️ Configuração do Backend<br>
 
 Acesse a pasta do servidor e instale as dependências:<br>
+```
 cd frontend/src<br>
 Mostrar mais linhas<br>
+```
 
 Inicie o servidor:<br>
+```
 npm run devMostrar mais linhas<br>
+```
 
 
 
 🎨 Configuração do Frontend<br>
 
 Vá para a pasta do cliente e instale as dependências:<br>
+```
 cd ../Client<br>
 npm install<br>
-
+```
 Execute o projeto:<br>
+```
 npm start<br>
-
+```
 
 🌐 Endereços Locais<br>
-
+```
 Frontend: http://localhost:5173<br>
 Backend: http://localhost:5000<br>
+```
 ## 💻 Configuração para Desenvolvimento
 
 Descreva como instalar todas as dependências para desenvolvimento e como rodar um test-suite automatizado de algum tipo. Se necessário, faça isso para múltiplas plataformas.
