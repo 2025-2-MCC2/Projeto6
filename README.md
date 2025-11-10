@@ -124,7 +124,7 @@ Backend: http://localhost:5000<br>
 ```
 
 ## 📋 Licença/License
-DevLiderança© 2025 by Eduarda Padilla, Lais Navarro, Ricardo Oliveira, Enzo Sakita and Enzo Sakita is licensed under CC BY-SA 4.0 
+DevLiderança© 2025 by <a href="https://github.com/2025-2-MCC2/Projeto6">Eduarda Padilla, Lais Navarro, Ricardo Oliveira, Enzo Sakita, Enzo Sakita</a> is licensed under CC BY-SA 4.0 
 
 ## 🎓 Referências
 
