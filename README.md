@@ -122,22 +122,9 @@ npm start<br>
 Frontend: http://localhost:5173<br>
 Backend: http://localhost:5000<br>
 ```
-## 💻 Configuração para Desenvolvimento
-
-Descreva como instalar todas as dependências para desenvolvimento e como rodar um test-suite automatizado de algum tipo. Se necessário, faça isso para múltiplas plataformas.
-
-Para abrir este projeto você necessita das seguintes ferramentas:
-
--<a href="https://godotengine.org/download">GODOT</a>
-
-```sh
-make install
-npm test
-Coloque código do prompt de comnando se for necessário
-```
 
 ## 📋 Licença/License
-Utilize o link <https://chooser-beta.creativecommons.org/> para fazer uma licença CC BY 4.0.
+DevLiderança© 2025 by Eduarda Padilla, Lais Navarro, Ricardo Oliveira, Enzo Sakita and Enzo Sakita is licensed under CC BY-SA 4.0 
 
 ## 🎓 Referências
 
