@@ -1,0 +1,173 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*cabeçalho*/
+.menu-header {
+  background: linear-gradient(90deg, #0f9d68 0%, #0b1324 100%);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  padding: 15px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.menu-header h1 {
+  color: #fdfdfd;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.menu-header nav a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #fdfdfd;
+  font-weight: 500;
+  transition: 0.2s;
+}
+
+.menu-header nav a:hover {
+  color: #16a34a;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.btn-doar {
+  background: #16a34a;
+  color: white;
+}
+
+.btn-doar:hover {
+  background: #15803d;
+}
+
+.btn-contato {
+  background: #2563eb;
+  color: white;
+}
+
+.btn-contato:hover {
+  background: #1e40af;
+}
+
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px 10%;
+  background: linear-gradient(90deg, #0f9d68 0%, #f0fdf4 100%);
+}
+
+.hero-content {
+  max-width: 500px;
+}
+
+.hero h2 {
+  font-size: 2rem;
+  color: #fdfdfd;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.hero-img {
+  width: 250px;
+  height: auto;
+  margin-top: 20px;
+}
+
+.btn.grande {
+  padding: 12px 30px;
+  font-size: 1rem;
+}
+
+/*sobre*/
+.sobre {
+  padding: 60px 10%;
+  background: white;
+  text-align: center;
+}
+
+.sobre h2 {
+  color: #15803d;
+  margin-bottom: 20px;
+}
+
+.sobre p {
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/*como ajudar*/
+.como-ajudar {
+  background: #f0fdf4;
+  padding: 60px 10%;
+  text-align: center;
+}
+
+.como-ajudar h2 {
+  color: #15803d;
+  margin-bottom: 30px;
+}
+
+.ajuda-opcoes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.ajuda-card {
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+.ajuda-card h3 {
+  color: #15803d;
+}
+
+.menu-footer {
+  background: #16a34a;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  font-size: 0.9rem;
+  margin-top: 40px;
+}
+
+/*design responsivo*/
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .menu-header nav a {
+    margin: 8px;
+  }
+
+  .hero-img {
+    width: 200px;
+  }
+}

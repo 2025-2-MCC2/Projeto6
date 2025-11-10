@@ -1,29 +1,35 @@
-```sh
-Utilize o site <https://www.toptal.com/developers/gitignore> para gerar seu arquivo gitignore e apague este campo.
-
-Vide tutoriais do PI.
-```
-
-# FECAP - Fundação de Comércio Álvares Penteado
+# <p align="center"> FECAP - Fundação de Comércio Álvares Penteado 
 
 <p align="center">
 <a href= "https://www.fecap.br/"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhZPrRa89Kma0ZZogxm0pi-tCn_TLKeHGVxywp-LXAFGR3B1DPouAJYHgKZGV0XTEf4AE&usqp=CAU" alt="FECAP - Fundação de Comércio Álvares Penteado" border="0"></a>
 </p>
 
-# Liderança Empáticas 
 
-## DevLiderança 
 
-## Integrantes: <a href="https://www.linkedin.com/in/eduardapadilla/">Eduarda Padilla</a>, <a href="https://www.linkedin.com/in/laisnavarro3110/">Lais Navarro</a>, <a href="https://www.linkedin.com/in/ricardoojunior/">Ricardo Oliveira </a>, <a href="https://www.linkedin.com/in/enzo-sakita-117801364/">Enzo Sakita, <a href="https://github.com/EricAloise">Eric Aloise</a>
+# <p align="center"> DevLiderança 
 
-## Professores Orientadores: <a href="https://www.linkedin.com/in/dolemes/">David Lemes</a>, <a href="https://www.linkedin.com/in/katia-bossi/">Katia Milani</a>, <a href="https://www.linkedin.com/in/cristina-machado-corr%C3%AAa-leite-630309160/">Cristina Machado</a>, <a href="https://www.linkedin.com/in/leonardo-fabris-lugoboni-a3369416/">Leonardo Lugoboni</a>, <a href="https://www.linkedin.com/in/francisco-escobar/">Francisco Escobar</a>
+## Integrantes:
+- [Eduarda Padilla](https://www.linkedin.com/in/eduardapadilla/)
+- [Lais Navarro](https://www.linkedin.com/in/laisnavarro3110/)
+- [Ricardo Oliveira](https://www.linkedin.com/in/ricardoojunior/)
+- [Enzo Sakita](https://www.linkedin.com/in/enzo-sakita-117801364/)
+- [Eric Aloise](https://github.com/EricAloise)
 
-## Descrição
+## Professores Orientadores:
+- [David Lemes](https://www.linkedin.com/in/dolemes/)
+- [Katia Milani](https://www.linkedin.com/in/katia-bossi/)
+- [Cristina Machado](https://www.linkedin.com/in/cristina-machado-corr%C3%AAa-leite-630309160/)
+- [Leonardo Lugoboni](https://www.linkedin.com/in/leonardo-fabris-lugoboni-a3369416/)
+- [Francisco Escobar](https://www.linkedin.com/in/francisco-escobar/)
+
+## <p align="center"> Descrição
 
 <p align="center">
-<img src="https://pix4free.org/assets/library/2021-01-20/originals/game.jpg" alt="NOME DO JOGO" border="0">
+<img src="https://github.com/user-attachments/assets/cce2c9fc-203b-4f49-a622-b667fe9e10b9" alt="DevLiderança" border="0">
   Game by <a href="http://www.nyphotographic.com/">Nick Youngson</a> <a rel="license" href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a> <a href="http://pix4free.org/">Pix4free</a>
 </p>
+
+
 
 
 De um a dois parágrafos sobre o que é seu projeto e o que ele faz.
@@ -35,84 +41,93 @@ May the force be with you!
 
 ## 🛠 Estrutura de pastas
 
+```
 -Raiz<br>
 |<br>
-|-->documentos<br>
-  &emsp;|-->antigos<br>
-  &emsp;|Documentação.docx<br>
-|-->executáveis<br>
-  &emsp;|-->windows<br>
-  &emsp;|-->android<br>
-  &emsp;|-->HTML<br>
-|-->imagens<br>
-|-->src<br>
-  &emsp;|-->Backend<br>
-  &emsp;|-->Frontend<br>
-|readme.md<br>
 
-A pasta raiz contem dois arquivos que devem ser alterados:
-
-<b>README.MD</b>: Arquivo que serve como guia e explicação geral sobre seu projeto. O mesmo que você está lendo agora.
-
-Há também 4 pastas que seguem da seguinte forma:
-
-<b>documentos</b>: Toda a documentação estará nesta pasta.
-
-<b>executáveis</b>: Binários e executáveis do projeto devem estar nesta pasta.
-
-<b>imagens</b>: Imagens do sistema
-
-<b>src</b>: Pasta que contém o código fonte.
+|-->Documentos
+|   |-->Entrega 1
+|   |   |-->Calculo 2
+|   |   |-->Desenvolvimento Web Full Stack
+|   |   |-->Banco De Dados
+|   |   |-->Gestão Empresarial
+|   |   |-->Projeto Interdisciplinar
+|   |
+|   |-->Entrega 2
+|       |-->Calculo 2
+|       |-->Desenvolvimento Web Full Stack
+|       |-->Banco De Dados
+|       |-->Gestão Empresarial
+|       |-->Projeto Interdisciplinar
+|
+|-->src
+|   |-->Entrega 1
+|   |   |-->Frontend
+|   |   |-->Backend
+|   |
+|   |-->Entrega 2
+|       |-->Frontend
+|       |-->Backend
+|
+|README.md
+|LICENSE
+```
 
 ## 🛠 Instalação
 
-<b>Android:</b>
-
-Faça o Download do JOGO.apk no seu celular.
-Execute o APK e siga as instruções de seu telefone.
-
-```sh
-Coloque código do prompt de comnando se for necessário
+📖 Guia de Instalação e Execução<br>
+✅ Pré-requisitos<br>
+Antes de começar, certifique-se de ter instalado:<br>
+```
+Node.js<br>
+npm<br>
+Git<br>
 ```
 
-<b>Windows:</b>
+🔽 Clonando o repositório<br>
+Execute os comandos abaixo para clonar o projeto e acessar a pasta:<br>
+```
+git clone https://github.com/2025-2-MCC2/Projeto2<br>
+cd Projeto6<br>
+```
+⚙️ Configuração do Backend<br>
 
-Não há instalação! Apenas executável!
-Encontre o JOGO.exe na pasta executáveis e execute-o como qualquer outro programa.
-
-```sh
-Coloque código do prompt de comnando se for necessário
+Acesse a pasta do servidor e instale as dependências:<br>
+```
+cd frontend/src<br>
+Mostrar mais linhas<br>
 ```
 
-<b>HTML:</b>
+Inicie o servidor:<br>
+```
+npm run devMostrar mais linhas<br>
+```
 
-Não há instalação!
-Encontre o index.html na pasta executáveis e execute-o como uma página WEB (através de algum browser).
 
-## 💻 Configuração para Desenvolvimento
 
-Descreva como instalar todas as dependências para desenvolvimento e como rodar um test-suite automatizado de algum tipo. Se necessário, faça isso para múltiplas plataformas.
+🎨 Configuração do Frontend<br>
 
-Para abrir este projeto você necessita das seguintes ferramentas:
+Vá para a pasta do cliente e instale as dependências:<br>
+```
+cd ../Client<br>
+npm install<br>
+```
+Execute o projeto:<br>
+```
+npm start<br>
+```
 
--<a href="https://godotengine.org/download">GODOT</a>
-
-```sh
-make install
-npm test
-Coloque código do prompt de comnando se for necessário
+🌐 Endereços Locais<br>
+```
+Frontend: http://localhost:5173<br>
+Backend: http://localhost:5000<br>
 ```
 
 ## 📋 Licença/License
-Utilize o link <https://chooser-beta.creativecommons.org/> para fazer uma licença CC BY 4.0.
+DevLiderança© 2025 by <a href="https://github.com/2025-2-MCC2/Projeto6">Eduarda Padilla, Lais Navarro, Ricardo Oliveira, Enzo Sakita, Enzo Sakita</a> is licensed under CC BY-SA 4.0 
 
 ## 🎓 Referências
 
 Aqui estão as referências usadas no projeto.
 
-1. <https://github.com/iuricode/readme-template>
-2. <https://github.com/gabrieldejesus/readme-model>
-3. <https://chooser-beta.creativecommons.org/>
-4. <https://freesound.org/>
-5. <https://www.toptal.com/developers/gitignore>
-6. Músicas por: <a href="https://freesound.org/people/DaveJf/sounds/616544/"> DaveJf </a> e <a href="https://freesound.org/people/DRFX/sounds/338986/"> DRFX </a> ambas com Licença CC 0.
+1. <https://liderancasempaticas.com/>
