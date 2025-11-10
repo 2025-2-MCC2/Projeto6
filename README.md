@@ -25,7 +25,7 @@
 ## <p align="center"> Descrição
 
 
-Criar uma aplicação web para gerenciamento do projeto Lideranças Empáticas, visando o controle eficiente de equipes, atividades, metas e resultados.
+O projeto visa desenvolver uma plataforma web responsiva para gerenciar as edições do projeto, controlando equipes, atividades, metas e resultados. A aplicação permitirá o acompanhamento transparente das ações e o desenvolvimento de habilidades de gestão, liderança e empreendedorismo entre alunos de graduação. O sistema incluirá funcionalidades como cadastro de equipes, geração de relatórios e autenticação de usuários.
 
 ## 🛠 Estrutura de pastas
 
