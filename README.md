@@ -43,17 +43,28 @@ May the force be with you!
 
 -Raiz<br>
 |<br>
-|-->documentos<br>
-  &emsp;|-->antigos<br>
-  &emsp;|Documentação.docx<br>
-|-->executáveis<br>
-  &emsp;|-->windows<br>
-  &emsp;|-->android<br>
-  &emsp;|-->HTML<br>
-|-->imagens<br>
-|-->src<br>
-  &emsp;|-->Backend<br>
-  &emsp;|-->Frontend<br>
+|-->Documentos
+    |-->Entrega 1  
+       |-->Calculo 2
+       |-->Desenvolvimento Web Full Stack
+       |-->Banco De Dados  
+       |-->Gestão Empresarial
+       |-->Projeto Interdisciplinar
+    |-->Entrega 2  
+       |-->Calculo 2  
+       |-->Desenvolvimento Web Full Stack
+       |-->Banco De Dados    
+       |-->Gestão Empresarial
+       |-->Projeto Interdisciplinar
+|src-->
+     |-->Entrega 1
+        |--Frontend
+        |-->Backend
+     |-->Entrega 2
+        |--Frontend
+        |-->Backend
+|README.md  
+|LICENSE  
 |readme.md<br>
 
 A pasta raiz contem dois arquivos que devem ser alterados:
