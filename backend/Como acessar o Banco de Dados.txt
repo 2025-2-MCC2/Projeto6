@@ -1,0 +1,3 @@
+1 - Abra o Xampp clique em 'Start' no MySql
+2- Vá no MySQL Workbench e importe um dos códigos 'Banco De Dados' ou 'meubanco_usuarios'
+3- Então aperta CTRL + ENTER e vai abrir a tabela com os Usuários cadastrados

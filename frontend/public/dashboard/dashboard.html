@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Dashboard Lideranças Empáticas</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Botão Hambúrguer -->
+    <div class="hamburger" id="hamburger">
+      <span></span> <span></span> <span></span>
+    </div>
+    <!-- Menu Dropdown -->
+    <div class="dropdown-menu" id="dropdown">
+      <a href="/" onclick="window.parent.location.href='/'; return false;"
+        >🏠 Início</a
+      >
+      <a href="dashboard.html" class="active">📊 Dashboard</a>
+      <a href="donates.html">💰 Doações</a> <a href="team.html">👥 Times</a>
+      <a href="configurações.html">⚙️ Configurações</a>
+    </div>
+    <!-- Overlay -->
+    <div class="overlay" id="overlay"></div>
+    <!-- Bolinha de Perfil -->
+    <div class="profile-container" id="profileContainer">
+      <div class="profile" id="profile">
+        <img id="userFoto" src="perfil.png" alt="Perfil" />
+      </div>
+      <div class="profile-dropdown" id="profileDropdown">
+        <a href="configurações.html">Meu perfil</a> 
+        <a href="/">Sair</a>
+      </div>
+    </div>
+    <!-- Header -->
+    <div class="header"><h1>Lideranças Empáticas</h1></div>
+    <!-- Filtro de Edição -->
+    <div class="filter-section">
+      <label for="editionFilter">Filtrar por Edição:</label>
+      <select id="editionFilter">
+        <option value="edicao7">Edição 7</option>
+        <option value="edicao6">Edição 6</option>
+        <option value="edicao5">Edição 5</option>
+        <option value="edicao4">Edição 4</option>
+        <option value="edicao3">Edição 3</option>
+        <option value="edicao2">Edição 2</option>
+        <option value="edicao1">Edição 1</option>
+        <option value="total">Total Geral</option>
+      </select>
+    </div>
+    <!-- Container do Dashboard -->
+    <div class="container">
+      <div class="dashboard-stats">
+        <div class="stat-card">
+          <strong>Participantes</strong>
+          <p>1.000</p>
+        </div>
+        <div class="stat-card">
+          <strong>Arrecadação Média</strong>
+          <p>1.000</p>
+        </div>
+        <div class="stat-card">
+          <strong>Pessoas Atendidas</strong>
+          <p>1.000</p>
+        </div>
+        <div class="stat-card">
+          <strong>Arrecadação Total/KG</strong>
+          <p>1.000</p>
+        </div>
+      </div>
+      <div class="ranking-section">
+        <h2>Ranking de Alimentos Mais Arrecadados</h2>
+        <table class="ranking-table">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Alimento</th>
+              <th>Quantidade Arrecadada</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>Arroz</td>
+              <td>200</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Feijão</td>
+              <td>180</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>Macarrão</td>
+              <td>150</td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>Óleo</td>
+              <td>130</td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td>Açúcar</td>
+              <td>120</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="ranking-section">
+        <h2>Alimentos Arrecadados</h2>
+        <table class="ranking-table">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Time</th>
+              <th>Quantidade de Ajudas</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>Arroz</td>
+              <td>500</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Feijão</td>
+              <td>450</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>Açúcar</td>
+              <td>420</td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>Macarrão</td>
+              <td>400</td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td>Fubá</td>
+              <td>380</td>
+            </tr>
+            <tr>
+              <td>6</td>
+              <td>Óleo</td>
+              <td>380</td>
+            </tr>
+            <tr>
+              <td>7</td>
+              <td>Leite em Pó</td>
+              <td>380</td>
+            </tr>
+            <tr>
+              <td>8</td>
+              <td>Itens Não Listados</td>
+              <td>380</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <script src="script.js"></script>
+    <script>
+      // Dropdown do perfil
+      const profile = document.getElementById("profile");
+      const profileDropdown = document.getElementById("profileDropdown");
+      profile.addEventListener("click", () => {
+        profileDropdown.classList.toggle("show");
+      });
+
+      // Fecha dropdown se clicar fora
+      document.addEventListener("click", (e) => {
+        if (
+          !profile.contains(e.target) &&
+          !profileDropdown.contains(e.target)
+        ) {
+          profileDropdown.classList.remove("show");
+        }
+      });
+    </script>
+  </body>
+</html>

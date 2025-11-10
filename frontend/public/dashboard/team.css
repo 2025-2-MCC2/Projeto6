@@ -1,0 +1,524 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Botão Hambúrguer */
+    .hamburger {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      width: 50px;
+      height: 50px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      z-index: 1100;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+      transition: all 0.3s ease;
+      gap: 6px;
+    }
+
+    .hamburger:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+    }
+
+    .hamburger span {
+      display: block;
+      height: 4px;
+      width: 24px;
+      background: linear-gradient(135deg, #6de495 0%, #5dd485 100%);
+      border-radius: 3px;
+      transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+
+    .hamburger.active span:nth-child(1) {
+      transform: rotate(45deg) translate(8px, 8px);
+    }
+
+    .hamburger.active span:nth-child(2) {
+      opacity: 0;
+      transform: translateX(-20px);
+    }
+
+    .hamburger.active span:nth-child(3) {
+      transform: rotate(-45deg) translate(8px, -8px);
+    }
+
+    /* Menu Dropdown */
+    .dropdown-menu {
+      position: fixed;
+      top: 90px;
+      left: 20px;
+      background: white;
+      border-radius: 16px;
+      box-shadow: 0 12px 48px rgba(0,0,0,0.15);
+      padding: 12px;
+      min-width: 240px;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(-20px) scale(0.95);
+      transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+      z-index: 1050;
+      border: 1px solid rgba(109, 228, 149, 0.2);
+    }
+
+    .dropdown-menu.show {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0) scale(1);
+    }
+
+    .dropdown-menu a {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 14px 16px;
+      color: #2c3e50;
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 500;
+      border-radius: 10px;
+      transition: all 0.2s ease;
+      margin-bottom: 6px;
+    }
+
+    .dropdown-menu a:last-child {
+      margin-bottom: 0;
+    }
+
+    .dropdown-menu a:hover, .dropdown-menu a.active {
+      background: linear-gradient(135deg, #6de495 0%, #5dd485 100%);
+      color: white;
+      transform: translateX(6px);
+    }
+
+    /* Overlay */
+    .overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.4);
+      backdrop-filter: blur(2px);
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease;
+      z-index: 1040;
+    }
+
+    .overlay.show {
+      opacity: 1;
+      visibility: visible;
+    }
+
+body {
+    font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #75ea66 0%, #2d853c 100%);
+    min-height: 100vh;
+    padding: 20px;
+    position: relative;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* HEADER */
+header {
+    text-align: center;
+    color: white;
+    margin-bottom: 50px;
+    padding: 40px 0;
+    animation: fadeInDown 0.6s ease;
+}
+
+header h1 {
+    font-size: 3em;
+    margin-bottom: 12px;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+    font-weight: 700;
+    letter-spacing: -1px;
+}
+
+.subtitle {
+    font-size: 1.2em;
+    opacity: 0.95;
+    font-weight: 300;
+}
+
+/* MAIN CONTAINER */
+main {
+    background: white;
+    border-radius: 20px;
+    padding: 50px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    animation: fadeInUp 0.6s ease;
+}
+
+/* BUTTONS SECTION */
+.buttons-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+.btn {
+    padding: 25px 35px;
+    font-size: 1.2em;
+    font-weight: 600;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.btn .icon {
+    font-size: 2.5em;
+    line-height: 1;
+}
+
+.btn-create {
+    background: linear-gradient(135deg,  #75ea66 0%, #2d853c 100%);
+    color: white;
+}
+
+.btn-create:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 15px 35px rgba(102, 126, 234, 0.4);
+}
+
+.btn-create:active {
+    transform: translateY(-2px) scale(1.01);
+}
+
+.btn-view {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    color: white;
+}
+
+.btn-view:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 15px 35px rgba(245, 87, 108, 0.4);
+}
+
+.btn-view:active {
+    transform: translateY(-2px) scale(1.01);
+}
+
+/* SECTIONS */
+.create-team-section,
+.teams-list {
+    animation: slideIn 0.4s ease;
+    margin-top: 30px;
+    padding-top: 30px;
+    border-top: 3px solid #f5f5f5;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.section-header h2 {
+    color: #333;
+    font-size: 2em;
+    font-weight: 700;
+}
+
+.close-btn {
+    background: #f5f5f5;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 1.5em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: #666;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.close-btn:hover {
+    background: #e74c3c;
+    color: white;
+    transform: rotate(90deg);
+}
+
+/* FORM */
+.team-form {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.form-group label {
+    font-weight: 600;
+    color: #444;
+    font-size: 1em;
+}
+
+.form-group input,
+.form-group textarea {
+    padding: 15px 18px;
+    border: 2px solid #e8e8e8;
+    border-radius: 12px;
+    font-size: 1em;
+    transition: all 0.3s ease;
+    font-family: inherit;
+    background: #fafafa;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #51e95d;
+    background: white;
+    box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.1);
+    transform: translateY(-2px);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.btn-submit {
+    background: linear-gradient(135deg,  #75ea66 0%, #2d853c 100%);
+    color: white;
+    padding: 18px;
+    font-size: 1.1em;
+    border-radius: 12px;
+    margin-top: 10px;
+}
+
+.btn-submit:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
+}
+
+/* TEAMS CONTAINER */
+.teams-container {
+    display: grid;
+    gap: 20px;
+}
+
+.team-card {
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+    padding: 30px;
+    border-radius: 15px;
+    border-left: 6px solid #667eea;
+    transition: all 0.3s ease;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+.team-card:hover {
+    transform: translateX(8px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    border-left-color: #f5576c;
+}
+
+.team-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.team-header h3 {
+    color: #2c3e50;
+    font-size: 1.5em;
+    font-weight: 700;
+}
+
+.team-date {
+    background: #e8eaf6;
+    color: #5c6bc0;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.85em;
+    font-weight: 600;
+}
+
+.team-description {
+    color: #666;
+    margin-bottom: 15px;
+    line-height: 1.6;
+    font-size: 1em;
+}
+
+.team-footer {
+    display: flex;
+    align-items: center;
+    padding-top: 15px;
+    border-top: 2px solid #f0f0f0;
+}
+
+.team-members {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #667eea;
+    font-weight: 600;
+    font-size: 1em;
+}
+
+.member-icon {
+    font-size: 1.2em;
+}
+
+/* NO TEAMS STATE */
+.no-teams {
+    text-align: center;
+    padding: 60px 40px;
+    color: #999;
+}
+
+.empty-icon {
+    font-size: 4em;
+    display: block;
+    margin-bottom: 20px;
+    opacity: 0.5;
+}
+
+.no-teams p {
+    font-size: 1.2em;
+    margin-bottom: 8px;
+    color: #666;
+}
+
+.no-teams small {
+    color: #999;
+    font-size: 0.95em;
+}
+
+/* NOTIFICATION */
+.notification {
+    position: fixed;
+    top: 30px;
+    right: 30px;
+    background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+    color: white;
+    padding: 18px 30px;
+    border-radius: 12px;
+    font-weight: 600;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    animation: slideInRight 0.4s ease, fadeOut 0.4s ease 2.6s;
+    z-index: 1000;
+    font-size: 1.05em;
+}
+
+/* ANIMATIONS */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeOut {
+    to {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    main {
+        padding: 30px 25px;
+    }
+    
+    header h1 {
+        font-size: 2.2em;
+    }
+    
+    .buttons-section {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .btn {
+        padding: 20px 25px;
+        font-size: 1.1em;
+    }
+    
+    .btn .icon {
+        font-size: 2em;
+    }
+    
+    .team-card {
+        padding: 20px;
+    }
+    
+    .team-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    
+    .notification {
+        right: 20px;
+        left: 20px;
+        top: 20px;
+    }
+}

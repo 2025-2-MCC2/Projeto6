@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Configurações - Lideranças Empáticas</title>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="configurações.css">
+</head>
+
+<body>
+  <!-- Botão Hambúrguer -->
+  <div class="hamburger" id="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <!-- Menu Dropdown -->
+  <div class="dropdown-menu" id="dropdown">
+    <a href="/" onclick="window.parent.location.href='/'; return false;">🏠 Início</a>
+    <a href="dashboard.html">📊 Dashboard</a>
+    <a href="donates.html">💰 Doações</a>
+    <a href="team.html">👥 Times</a>
+    <a href="#" class="active">⚙️ Configurações</a>
+  </div>
+
+  <!-- Overlay -->
+  <div class="overlay" id="overlay"></div>
+
+  <!-- Header -->
+  <div class="header">
+    <h1>⚙️ Configurações</h1>
+    <p>Gerencie as informações da organização</p>
+  </div>
+
+  <!-- Container -->
+  <div class="container">
+
+    <!-- Dados do Perfil (novo card) -->
+    <div class="config-card" id="dadosPerfilCard">
+      <h2>📄 Dados do Perfil</h2>
+      <div class="config-item">
+        <div class="config-item-info">
+          <h3>Nome</h3>
+        </div>
+        <p id="nomeBanco">Carregando...</p>
+      </div>
+      <div class="config-item">
+        <div class="config-item-info">
+          <h3>Email</h3>
+        </div>
+        <p id="emailBanco">Carregando...</p>
+      </div>
+    </div>
+
+    <!-- Perfil -->
+    <div class="config-card">
+      <h2>👤 Perfil</h2>
+      <div class="config-item">
+        <div class="config-item-info">
+          <h3>Foto do Perfil</h3>
+        </div>
+        <input type="file" id="foto" name="foto" accept="image/*">
+        <img id="preview" src="../assets/perfil.png" alt="Foto de Perfil"
+          style="width:100px; height:100px; border-radius:50%; margin-top:10px;">
+      </div>
+      <div class="config-item">
+        <div class="config-item-info">
+          <h3>Nome Completo</h3>
+          <p>Nome exibido no dashboard</p>
+        </div>
+        <input type="text" id="nome" class="config-input" placeholder="Nome" />
+      </div>
+      <div class="config-item">
+        <div class="config-item-info">
+          <h3>Email</h3>
+        </div>
+        <input type="email" id="email" class="config-input" placeholder="Email" />
+      </div>
+      <div class="config-item">
+        <div class="config-item-info">
+          <h3>Telefone</h3>
+          <p>Telefone para contato</p>
+        </div>
+        <input type="tel" id="telefone" class="config-input" placeholder="Telefone" />
+      </div>
+    </div>
+
+    <!-- Segurança -->
+    <div class="config-card">
+      <h2>🔒 Segurança</h2>
+      <div class="config-item">
+        <div class="config-item-info">
+          <h3>Alterar Senha</h3>
+          <p>Redefinir sua senha de acesso</p>
+        </div>
+        <input type="password" id="senha" class="config-input" placeholder="Digite nova senha" />
+      </div>
+    </div>
+
+    <!-- Ações -->
+    <div class="config-card">
+      <button class="btn btn-primary" id="salvarBtn">💾 Salvar Configurações</button>
+      <div id="mensagem" style="margin-top:10px; font-weight:bold;"></div>
+      <button class="btn btn-danger" id="deleteAccountBtn" style="margin-top:10px;">🗑️ Excluir Conta</button>
+    </div>
+  </div>
+
+  <script>
+    // Menu hambúrguer
+    const hamburger = document.getElementById('hamburger');
+    const dropdown = document.getElementById('dropdown');
+    const overlay = document.getElementById('overlay');
+
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      dropdown.classList.toggle('show');
+      overlay.classList.toggle('show');
+    });
+
+    overlay.addEventListener('click', () => {
+      hamburger.classList.remove('active');
+      dropdown.classList.remove('show');
+      overlay.classList.remove('show');
+    });
+
+    // Preview da foto
+    const fotoInput = document.getElementById('foto');
+    const preview = document.getElementById('preview');
+
+    fotoInput.addEventListener('change', (e) => {
+      const file = e.target.files[0];
+      if (file) {
+        const reader = new FileReader();
+        reader.onload = () => preview.src = reader.result;
+        reader.readAsDataURL(file);
+      }
+    });
+
+    // Buscar dados do perfil ao carregar
+    window.addEventListener('DOMContentLoaded', async () => {
+      const token = localStorage.getItem('token');
+      if (!token) {
+        document.getElementById('nomeBanco').innerText = '❌ Não logado';
+        document.getElementById('emailBanco').innerText = '❌ Não logado';
+        return;
+      }
+
+      try {
+        const res = await fetch('http://localhost:8081/perfil', {
+          headers: { 'Authorization': `Bearer ${token}` }
+        });
+        const data = await res.json();
+
+        if (res.ok) {
+          document.getElementById('nomeBanco').innerText = data.nome || '-';
+          document.getElementById('emailBanco').innerText = data.email || '-';
+
+          // Preenche os inputs de edição também
+          document.getElementById('nome').value = data.nome || '';
+          document.getElementById('email').value = data.email || '';
+          document.getElementById('telefone').value = data.telefone || '';
+          if (data.foto) preview.src = `http://localhost:8081/${data.foto}`;
+        } else {
+          document.getElementById('nomeBanco').innerText = '❌ Não foi possível carregar';
+          document.getElementById('emailBanco').innerText = '❌ Não foi possível carregar';
+          console.error('Erro ao buscar perfil:', data.message || data);
+        }
+      } catch (err) {
+        console.error('Erro ao conectar com o servidor:', err);
+        document.getElementById('nomeBanco').innerText = '❌ Erro de conexão';
+        document.getElementById('emailBanco').innerText = '❌ Erro de conexão';
+      }
+    });
+
+    // Salvar configurações via backend
+    const salvarBtn = document.getElementById('salvarBtn');
+    const mensagem = document.getElementById('mensagem');
+
+    salvarBtn.addEventListener('click', async () => {
+      const nome = document.getElementById('nome').value;
+      const email = document.getElementById('email').value;
+      const telefone = document.getElementById('telefone').value;
+      const senha = document.getElementById('senha').value;
+      const foto = fotoInput.files[0];
+
+      const formData = new FormData();
+      formData.append('nome', nome);
+      formData.append('email', email);
+      formData.append('telefone', telefone);
+      if (senha) formData.append('senha', senha);
+      if (foto) formData.append('foto', foto);
+
+      try {
+        const token = localStorage.getItem('token');
+        if (!token) {
+          mensagem.style.color = 'red';
+          mensagem.innerText = '❌ Você precisa estar logado';
+          return;
+        }
+
+        const res = await fetch('http://localhost:8081/update', {
+          method: 'POST',
+          headers: { 'Authorization': `Bearer ${token}` },
+          body: formData
+        });
+
+        const data = await res.json();
+
+        if (res.ok) {
+          mensagem.style.color = 'green';
+          mensagem.innerText = '✅ Perfil atualizado com sucesso!';
+
+          setTimeout(() => {
+            window.location.href = 'dashboard.html';
+          }, 1000);
+        } else {
+          mensagem.style.color = 'red';
+          mensagem.innerText = data.message || '❌ Erro ao atualizar perfil';
+        }
+      } catch (err) {
+        console.error(err);
+        mensagem.style.color = 'red';
+        mensagem.innerText = '❌ Erro ao conectar com o servidor';
+      }
+    });
+  </script>
+
+  <script>
+  // ... código existente de salvar e menus
+
+  const deleteBtn = document.getElementById('deleteAccountBtn');
+
+  deleteBtn.addEventListener('click', async () => {
+    const confirmDelete = confirm("Tem certeza que quer excluir sua conta? Isso não pode ser desfeito!");
+    if (!confirmDelete) return;
+
+    try {
+      const token = localStorage.getItem('token');
+      if (!token) {
+        alert('❌ Você precisa estar logado para excluir a conta.');
+        return;
+      }
+
+      console.log("Token enviado:", token);
+
+      const res = await fetch('http://localhost:8081/delete-account', { // ⚠️ ajuste a URL conforme seu backend
+        method: 'DELETE',
+        headers: { 'Authorization': `Bearer ${token}` }
+      });
+
+      const data = await res.json();
+
+      if (res.ok) {
+        alert('✅ Conta excluída com sucesso!');
+        localStorage.removeItem('token'); // limpa token
+        window.location.href = '/'; // redireciona para menu
+      } else {
+        alert(data.message || '❌ Erro ao excluir conta');
+      }
+    } catch (err) {
+      console.error(err);
+      alert('❌ Erro ao conectar com o servidor');
+    }
+  });
+</script>
+
+</body>
+</html>
