@@ -43,29 +43,35 @@ May the force be with you!
 
 -Raiz<br>
 |<br>
+```
 |-->Documentos
-    |-->Entrega 1  
-       |-->Calculo 2
-       |-->Desenvolvimento Web Full Stack
-       |-->Banco De Dados  
-       |-->Gestão Empresarial
-       |-->Projeto Interdisciplinar
-    |-->Entrega 2  
-       |-->Calculo 2  
-       |-->Desenvolvimento Web Full Stack
-       |-->Banco De Dados    
-       |-->Gestão Empresarial
-       |-->Projeto Interdisciplinar
-|src-->
-     |-->Entrega 1
-        |--Frontend
-        |-->Backend
-     |-->Entrega 2
-        |--Frontend
-        |-->Backend
-|README.md  
-|LICENSE  
-|readme.md<br>
+|   |-->Entrega 1
+|   |   |-->Calculo 2
+|   |   |-->Desenvolvimento Web Full Stack
+|   |   |-->Banco De Dados
+|   |   |-->Gestão Empresarial
+|   |   |-->Projeto Interdisciplinar
+|   |
+|   |-->Entrega 2
+|       |-->Calculo 2
+|       |-->Desenvolvimento Web Full Stack
+|       |-->Banco De Dados
+|       |-->Gestão Empresarial
+|       |-->Projeto Interdisciplinar
+|
+|-->src
+|   |-->Entrega 1
+|   |   |-->Frontend
+|   |   |-->Backend
+|   |
+|   |-->Entrega 2
+|       |-->Frontend
+|       |-->Backend
+|
+|README.md
+|LICENSE
+```
+
 
 A pasta raiz contem dois arquivos que devem ser alterados:
 
