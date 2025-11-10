@@ -41,9 +41,10 @@ May the force be with you!
 
 ## 🛠 Estrutura de pastas
 
+```
 -Raiz<br>
 |<br>
-```
+
 |-->Documentos
 |   |-->Entrega 1
 |   |   |-->Calculo 2
@@ -72,46 +73,47 @@ May the force be with you!
 |LICENSE
 ```
 
-
-A pasta raiz contem dois arquivos que devem ser alterados:
-
-<b>README.MD</b>: Arquivo que serve como guia e explicação geral sobre seu projeto. O mesmo que você está lendo agora.
-
-Há também 4 pastas que seguem da seguinte forma:
-
-<b>documentos</b>: Toda a documentação estará nesta pasta.
-
-<b>executáveis</b>: Binários e executáveis do projeto devem estar nesta pasta.
-
-<b>imagens</b>: Imagens do sistema
-
-<b>src</b>: Pasta que contém o código fonte.
-
 ## 🛠 Instalação
 
-<b>Android:</b>
+📖 Guia de Instalação e Execução
+✅ Pré-requisitos
+Antes de começar, certifique-se de ter instalado:
 
-Faça o Download do JOGO.apk no seu celular.
-Execute o APK e siga as instruções de seu telefone.
+Node.js 
+npm
+Git
 
-```sh
-Coloque código do prompt de comnando se for necessário
-```
 
-<b>Windows:</b>
+🔽 Clonando o repositório
+Execute os comandos abaixo para clonar o projeto e acessar a pasta:
+git clone https://github.com/2025-2-MCC2/Projeto2
+cd Projeto6
 
-Não há instalação! Apenas executável!
-Encontre o JOGO.exe na pasta executáveis e execute-o como qualquer outro programa.
+⚙️ Configuração do Backend
 
-```sh
-Coloque código do prompt de comnando se for necessário
-```
+Acesse a pasta do servidor e instale as dependências:
+cd frontend/src
+Mostrar mais linhas
 
-<b>HTML:</b>
+Inicie o servidor:
+npm run devMostrar mais linhas
 
-Não há instalação!
-Encontre o index.html na pasta executáveis e execute-o como uma página WEB (através de algum browser).
 
+
+🎨 Configuração do Frontend
+
+Vá para a pasta do cliente e instale as dependências:
+cd ../Client
+npm install
+
+Execute o projeto:
+npm start
+
+
+🌐 Endereços Locais
+
+Frontend: http://localhost:5173
+Backend: http://localhost:5000
 ## 💻 Configuração para Desenvolvimento
 
 Descreva como instalar todas as dependências para desenvolvimento e como rodar um test-suite automatizado de algum tipo. Se necessário, faça isso para múltiplas plataformas.
