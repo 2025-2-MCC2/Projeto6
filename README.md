@@ -24,7 +24,6 @@
 
 ## <p align="center"> Descrição
 
-
 O projeto visa desenvolver uma plataforma web responsiva para gerenciar as edições do projeto, controlando equipes, atividades, metas e resultados. A aplicação permitirá o acompanhamento transparente das ações e o desenvolvimento de habilidades de gestão, liderança e empreendedorismo entre alunos de graduação. O sistema incluirá funcionalidades como cadastro de equipes, geração de relatórios e autenticação de usuários.
 
 ## 🛠 Estrutura de pastas
